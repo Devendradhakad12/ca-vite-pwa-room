@@ -101,30 +101,32 @@ function SixPerson() {
               <div className="card-body bg-slate-800 text-white rounded-xl">
                 <p className="text-center">
                   {ca < 0 ? (
-                    <>{`Devendra Dhakad ko lene he ₹${ca * -1}`}</>
+                    <>{`Devendra Dhakad ko lene he ₹${Number(ca * -1).toFixed(
+                      2
+                    )}`}</>
                   ) : (
-                    <>{`Devendra Dhakad ko dene he ₹${ca}`}</>
+                    <>{`Devendra Dhakad ko dene he ₹${ca.toFixed(2)}`}</>
                   )}
                   <br />
                   {cb < 0
-                    ? `Anand Singh ko lene he ₹${cb * -1}`
-                    : `Anand Singh ko dene he ₹${cb}`}
+                    ? `Anand Singh ko lene he ₹${Number(cb * -1).toFixed(2)}`
+                    : `Anand Singh ko dene he ₹${cb.toFixed(2)}`}
                   <br />
                   {cc < 0
-                    ? `P Gurjar ko lene he ₹${cc * -1}`
-                    : `P Gurjar ko dene he ₹${cc}`}
+                    ? `P Gurjar ko lene he ₹${Number(cc * -1).toFixed(2)}`
+                    : `P Gurjar ko dene he ₹${cc.toFixed(2)}`}
                   <br />
                   {cd < 0
-                    ? `Hariom ko lene he ₹${cd * -1}`
-                    : `Hariom ko dene he ₹${cd}`}
+                    ? `Hariom ko lene he ₹${Number(cd * -1).toFixed(2)}`
+                    : `Hariom ko dene he ₹${cd.toFixed(2)}`}
                   <br />
                   {ce < 0
-                    ? `Rajvardhn ko lene he ₹${ce * -1}`
-                    : `Rajvardhn ko dene he ₹${ce}`}
+                    ? `Rajvardhn ko lene he ₹${Number(ce * -1).toFixed(2)}`
+                    : `Rajvardhn ko dene he ₹${ce.toFixed(2)}`}
                   <br />
                   {cf < 0
-                    ? `Jayant ko lene he ₹${cf * -1}`
-                    : `Jayant ko dene he ₹${cf}`}
+                    ? `Jayant ko lene he ₹${Number(cf * -1).toFixed(2)}`
+                    : `Jayant ko dene he ₹${cf.toFixed(2)}`}
                 </p>
               </div>
             </div>
