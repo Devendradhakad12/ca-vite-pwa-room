@@ -35,8 +35,8 @@ function FourPerson() {
     setView(true);
   };
 
-  /*   console.log({ a, b, c, d });
-  console.log({ ca, cb, cc, cd }); */
+    console.log({ a, b, c, d });
+  console.log({ ca, cb, cc, cd });
 
   return (
     <div className="min-h-screen bg-slate-900 text-white flex flex-col gap-5 pt-[4%] pb-[2%]  items-center">
