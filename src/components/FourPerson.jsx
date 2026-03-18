@@ -5,15 +5,13 @@ function FourPerson() {
   const [b, setB] = useState("");
   const [c, setC] = useState("");
   const [d, setD] = useState("");
-  const [e, setE] = useState("");
-  const [f, setF] = useState("");
+ 
 
   const [ca, setCA] = useState(0);
   const [cb, setCB] = useState(0);
   const [cc, setCC] = useState(0);
   const [cd, setCD] = useState(0);
-  const [ce, setCE] = useState(0);
-  const [cf, setCF] = useState(0);
+ 
 
   const [perPerson, setPerPerson] = useState(0);
   const [toTotal, setToTotal] = useState(0);
@@ -22,16 +20,15 @@ function FourPerson() {
 
   const caFunc = (e) => {
     e.preventDefault();
-    const to = Number(a) + Number(b) + Number(c) + Number(d) + Number(e) + Number(f);
-    const per = to / 6;
+    const to = Number(a) + Number(b) + Number(c) + Number(d);
+    const per = to / 4;
     setPerPerson(per);
     setToTotal(to);
     setCA(per - Number(a));
     setCB(per - Number(b));
     setCC(per - Number(c));
     setCD(per - Number(d));
-    setCE(per - Number(e));
-    setCF(per - Number(f));
+ 
     setView(true);
   };
 
@@ -74,20 +71,6 @@ function FourPerson() {
               value={d}
               onChange={(e) => setD(e.target.value)}
             />
-            <input
-              type="number"
-              placeholder="Abhisekh Dhakad"
-              className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
-              value={e}
-              onChange={(e) => setE(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Hemant Dhakad"
-              className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
-              value={f}
-              onChange={(e) => setF(e.target.value)}
-            />
 
 
 
@@ -119,13 +102,7 @@ function FourPerson() {
                     ? `Umma Dhakad ko lene he ₹${cd * -1}`
                     : `Umma Dhakad ko dene he ₹${cd}`}
                   <br />
-                  {ce < 0
-                    ? `Abhisekh Dhakad ko lene he ₹${ce * -1}`
-                    : `Abhisekh Dhakad ko dene he ₹${ce}`}
-                  <br />
-                  {cf < 0
-                    ? `Hemant Dhakad ko lene he ₹${cf * -1}`
-                    : `Hemant Dhakad ko dene he ₹${cf}`}
+            
                 </p>
               </div>
             </div>

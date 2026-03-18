@@ -3,6 +3,7 @@ import "./App.css";
 import ThreePerson from "./components/ThreePeroson";
 import FourPerson from "./components/FourPerson";
 import SixPerson from "./components/SixPerson";
+import FivePerson from "./components/FivePerson";
 
 function App() {
   const [person, setPerson] = useState(6);
@@ -18,10 +19,12 @@ function App() {
       >
         <option value={3}>3</option>
         <option value={4}>4</option>
+        <option value={5}>5</option>
         <option value={6}>6</option>
       </select>
       {person === 3 ? <ThreePerson /> : ""}
       {person === 4 ? <FourPerson /> : ""}
+      {person === 5 ? <FivePerson /> : ""}
       {person === 6 ? <SixPerson /> : ""}
     </div>
   );

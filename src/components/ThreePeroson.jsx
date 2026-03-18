@@ -49,7 +49,7 @@ function ThreePerson() {
 
           <input
             type="number"
-            placeholder="Anand Singh"
+            placeholder="Ajay Dhakad"
             className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
             value={b}
             onChange={(e) => setB(e.target.value)}
@@ -57,7 +57,7 @@ function ThreePerson() {
 
           <input
             type="number"
-            placeholder="P Gurjar"
+            placeholder="Umma Dhakad"
             className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
             value={c}
             onChange={(e) => setC(e.target.value)}
@@ -88,12 +88,12 @@ function ThreePerson() {
                   )}
                   <br />
                   {cb < 0
-                    ? `Anand Singh ko lene he ₹${cb * -1}`
-                    : `Anand Singh ko dene he ₹${cb}`}
+                    ? `Ajay Dhakad ko lene he ₹${cb * -1}`
+                    : `Ajay Dhakad ko dene he ₹${cb}`}
                   <br />
                   {cc < 0
-                    ? `P Gurjar ko lene he ₹${cc * -1}`
-                    : `P Gurjar ko dene he ₹${cc}`}
+                    ? `Umma Dhakad ko lene he ₹${cc * -1}`
+                    : `Umma Dhakad ko dene he ₹${cc}`}
                   <br />
                   {/*      {cd < 0
                     ? `Balmukund ko lene he ₹${cd * -1}`

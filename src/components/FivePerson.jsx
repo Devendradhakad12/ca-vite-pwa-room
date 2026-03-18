@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-function SixPerson() {
+function FivePerson() {
   const [a, setA] = useState("");
   const [b, setB] = useState("");
   const [c, setC] = useState("");
   const [d, setD] = useState("");
   const [e, setE] = useState("");
-  const [f, setF] = useState("");
+  
 
   const [ca, setCA] = useState(0);
   const [cb, setCB] = useState(0);
   const [cc, setCC] = useState(0);
   const [cd, setCD] = useState(0);
   const [ce, setCE] = useState(0);
-  const [cf, setCF] = useState(0);
+ 
 
   const [perPerson, setPerPerson] = useState(0);
   const [toTotal, setToTotal] = useState(0);
@@ -22,9 +22,8 @@ function SixPerson() {
 
   const caFunc = (e) => {
     e.preventDefault();
-    const to =
-      Number(a) + Number(b) + Number(c) + Number(d) + Number(e) + Number(f);
-    const per = to / 6;
+    const to = Number(a) + Number(b) + Number(c) + Number(d) + Number(e);
+    const per = to / 5  ;
     setPerPerson(per);
     setToTotal(to);
     setCA(per - Number(a));
@@ -36,7 +35,7 @@ function SixPerson() {
     setView(true);
   };
 
-  console.log({ a, b, c, d });
+    console.log({ a, b, c, d });
   console.log({ ca, cb, cc, cd });
 
   return (
@@ -68,27 +67,23 @@ function SixPerson() {
             onChange={(e) => setC(e.target.value)}
           />
 
-          <input
-            type="number"
-            placeholder="Umma Dhakad"
-            className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
-            value={d}
-            onChange={(e) => setD(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Abhisekh Dhakad"
-            className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
-            value={e}
-            onChange={(e) => setE(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Hemant Dhakad"
-            className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
-            value={f}
-            onChange={(e) => setF(e.target.value)}
-          />
+            <input
+              type="number"
+              placeholder="Umma Dhakad"
+              className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
+              value={d}
+              onChange={(e) => setD(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Abhisekh Dhakad"
+              className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
+              value={e}
+              onChange={(e) => setE(e.target.value)}
+            />
+        
+
+
 
           <button className="btn btn-primary text-xl">Calculate</button>
         </form>
@@ -121,10 +116,7 @@ function SixPerson() {
                   {ce < 0
                     ? `Abhisekh Dhakad ko lene he ₹${ce * -1}`
                     : `Abhisekh Dhakad ko dene he ₹${ce}`}
-                  <br />
-                  {cf < 0
-                    ? `Hemant Dhakad ko lene he ₹${cf * -1}`
-                    : `Hemant Dhakad ko dene he ₹${cf}`}
+               
                 </p>
               </div>
             </div>
@@ -145,4 +137,4 @@ function SixPerson() {
   );
 }
 
-export default SixPerson;
+export default FivePerson;
