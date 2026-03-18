@@ -20,11 +20,13 @@ function SixPerson() {
 
   const [view, setView] = useState(false);
 
-  const caFunc = (e) => {
-    e.preventDefault();
+  const caFunc = (es) => {
+    es.preventDefault();
+    console.log({ a, b, c, d,e,f });
     const to =
       Number(a) + Number(b) + Number(c) + Number(d) + Number(e) + Number(f);
     const per = to / 6;
+    console.log({ to, per });
     setPerPerson(per);
     setToTotal(to);
     setCA(per - Number(a));
@@ -36,8 +38,8 @@ function SixPerson() {
     setView(true);
   };
 
-  console.log({ a, b, c, d });
-  console.log({ ca, cb, cc, cd });
+  console.log({ a, b, c, d,e,f });
+  console.log({ ca, cb, cc, cd,ce,cf });
 
   return (
     <div className="min-h-screen bg-slate-900 text-white flex flex-col gap-5 pt-[4%] pb-[2%]  items-center">
@@ -80,14 +82,14 @@ function SixPerson() {
             placeholder="Abhisekh Dhakad"
             className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
             value={e}
-            onChange={(e) => setE(e.target.value)}
+            onChange={(el) => setE(el.target.value)}
           />
           <input
             type="number"
             placeholder="Hemant Dhakad"
             className="input bg-slate-900 text-white input-bordered input-primary w-full max-w-xs text-center"
             value={f}
-            onChange={(e) => setF(e.target.value)}
+            onChange={(el) => setF(el.target.value)}
           />
 
           <button className="btn btn-primary text-xl">Calculate</button>
@@ -101,30 +103,30 @@ function SixPerson() {
               <div className="card-body bg-slate-800 text-white rounded-xl">
                 <p className="text-center">
                   {ca < 0 ? (
-                    <>{`Devendra Dhakad ko lene he ₹${ca * -1}`}</>
+                    <>{`Devendra Dhakad ko lene he ₹${Number(ca * -1).toFixed(2)}`}</>
                   ) : (
-                    <>{`Devendra Dhakad ko dene he ₹${ca}`}</>
+                    <>{`Devendra Dhakad ko dene he ₹${Number(ca).toFixed(2)}`}</>
                   )}
                   <br />
                   {cb < 0
-                    ? `Ajay Dhakad ko lene he ₹${cb * -1}`
-                    : `Ajay Dhakad ko dene he ₹${cb}`}
+                    ? `Ajay Dhakad ko lene he ₹${Number(cb * -1).toFixed(2)}`
+                    : `Ajay Dhakad ko dene he ₹${Number(cb).toFixed(2)}`}
                   <br />
                   {cc < 0
-                    ? `Sandip Dhakad ko lene he ₹${cc * -1}`
-                    : `Sandip Dhakad ko dene he ₹${cc}`}
+                    ? `Sandip Dhakad ko lene he ₹${Number(cc * -1).toFixed(2)}`
+                    : `Sandip Dhakad ko dene he ₹${Number(cc).toFixed(2)}`}
                   <br />
                   {cd < 0
-                    ? `Umma Dhakad ko lene he ₹${cd * -1}`
-                    : `Umma Dhakad ko dene he ₹${cd}`}
+                    ? `Umma Dhakad ko lene he ₹${Number(cd * -1).toFixed(2)}`
+                    : `Umma Dhakad ko dene he ₹${Number(cd).toFixed(2)}`}
                   <br />
                   {ce < 0
-                    ? `Abhisekh Dhakad ko lene he ₹${ce * -1}`
-                    : `Abhisekh Dhakad ko dene he ₹${ce}`}
+                    ? `Abhisekh Dhakad ko lene he ₹${Number(ce * -1).toFixed(2)}`
+                    : `Abhisekh Dhakad ko dene he ₹${Number(ce).toFixed(2)}`}
                   <br />
                   {cf < 0
-                    ? `Hemant Dhakad ko lene he ₹${cf * -1}`
-                    : `Hemant Dhakad ko dene he ₹${cf}`}
+                    ? `Hemant Dhakad ko lene he ₹${Number(cf * -1).toFixed(2)}`
+                    : `Hemant Dhakad ko dene he ₹${Number(cf).toFixed(2)}`}
                 </p>
               </div>
             </div>
@@ -132,8 +134,8 @@ function SixPerson() {
           <div>
             <div className="card sm:w-96 w-[100%] bg-base-100 shadow-xl">
               <div className="card-body bg-slate-800 text-white rounded-xl">
-                <p className="text-center">Total = {toTotal}</p>
-                <p className="text-center">Per Person = {perPerson}</p>
+                <p className="text-center">Total = {Number(toTotal).toFixed(2)}</p>
+                <p className="text-center">Per Person = {Number(perPerson).toFixed(2)}</p>
               </div>
             </div>
           </div>
